@@ -9,21 +9,21 @@ url = "https://lonon-china.en.alibaba.com/"
 response = requests.get(url)
 
 # Create a BeautifulSoup object from the HTML content
-soup = BeautifulSoup(response.content, "lxml")
+soup = BeautifulSoup(response.content, "html.parser")
 
 # Find the elements containing the product information
 product_name_element = soup.find("span", class_="title-con")
 price_element = soup.find("div", class_="price")
-description_element = soup.find("div", class_="do-entry do-entry-separate")
+description_element = soup.find("span", class_="attr-name J-attr-name")
 variant_element = soup.find("div", class_="item-last item-size")
-link_elements = soup.find_all("a", class_="product-image")
+link_elements = soup.find_all("a", class_="href")
 
 # Extract the text from the elements
 product_name = product_name_element.text.strip() if product_name_element else "N/A"
 price = price_element.text.strip() if price_element else "N/A"
 description = description_element.text.strip() if description_element else "N/A"
 variant = variant_element.text.strip() if variant_element else "N/A"
-links = [link['href'] for link in link_elements] if link_elements else []
+links = [link['href'] if 'href' in link.attrs else "N/A" for link in link_elements]
 
 # Create a list of dictionaries to store the extracted information
 product_data = [
