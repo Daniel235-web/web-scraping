@@ -1,0 +1,3 @@
+company name: aeriestechnologygroup(sabreindustries) 
+Required skills: mvvm,json,rest,junit,mobile,visualstudio 
+more info: {more_info}

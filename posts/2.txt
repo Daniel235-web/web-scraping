@@ -1,0 +1,3 @@
+company name: AppInnovationTechnologiesPvtLtd 
+Required skills: rest,mobile,bugfixing,androiddevelopment,json,api 
+more info: {more_info}

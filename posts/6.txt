@@ -1,0 +1,3 @@
+company name: CSATSystemsPvtLtd 
+Required skills: c#,c,androiddevelopment,eclipse,sql,java 
+more info: {more_info}

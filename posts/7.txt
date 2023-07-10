@@ -1,0 +1,3 @@
+company name: ULTISOURCEPvtLtd. 
+Required skills: rest,mobile,mvvm,json 
+more info: {more_info}
